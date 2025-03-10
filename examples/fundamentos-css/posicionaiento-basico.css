@@ -1,0 +1,42 @@
+/*---------- Posicionamiento Basico ----------*/
+
+p ~ div{/*valores generales para todos los divs existentes en el documento*/
+    border: 2px solid black;/*tamanio del borde y color*/
+    height: 100px; /*alto del contenedor*/
+    padding: 5px;
+    margin: 5px;
+}
+/* posicionamiento estatico */
+.static{
+    position:static;
+    background: #e26a6a88;
+}
+/* posicion relativa */
+.relative{
+    position: relative;
+    left: 100px;
+    top: 50px;
+    background: #6aa8e288;
+}
+/* posicion absoluta */
+.absolute{
+    position: absolute;
+    right: 100px;
+    bottom: 1px;
+    background: #b4e26a88;
+}
+/* posicion fixed */
+.fixed{
+    /* display: none; */
+    position: fixed;
+    top: 100px; /*posiciona el contenedor en forma vertical arriba*/
+    right: 100px; /*posiciona el contenedor en forma horizontal derecha*/
+    background: #e2d66a88;
+}
+/* posicion sticky */
+.sticky{
+    /* display: none; */
+    position: sticky;
+    bottom: 5px;
+    background: #6ae27e88;
+}
