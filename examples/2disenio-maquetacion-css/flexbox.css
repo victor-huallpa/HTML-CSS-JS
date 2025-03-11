@@ -1,0 +1,44 @@
+/*---------- FLEXBOX ----------*/
+/* diaplay:flex; */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background: lightgray;
+    margin: 0 0 10px 0;
+}
+  
+  .flex-item {
+    width: 100px;
+    height: 50px;
+    background: steelblue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+  }
+  /* fleX-item */
+  .contenedor {
+    display: flex;
+    background-color: lightgray;
+    padding: 20px;
+  }
+  
+  .item {
+    background-color: steelblue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+  }
+  /* graow */
+  .grow {
+    flex-grow: 1; /* Permite que el ítem crezca */
+  }
+  /* shrink */
+  .shrink {
+    flex-shrink: 2; /* Permite que el ítem se reduzca más que los demás */
+  }
+  /* basis */
+  .basis {
+    flex-basis: 200px; /* Establece el tamaño base del ítem */
+  }

@@ -1,0 +1,289 @@
+/*------------ Poniedo en practica todo lo aprendido  ------------*/
+/* importar fuente de texto */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+
+html, body{
+    min-height: 100vh;
+    min-width: 100vw;
+}
+/* disponemos escios para el contenido en general con grid */
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    background-color: rgb(237, 246, 255);
+}
+/*------------------ header content ------------------*/
+header{
+    position: sticky;
+    top: 0;
+    background-color: rgb(148, 233, 233);
+}
+header > nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+
+    padding: 5px 5%;
+}
+.header-logo img{
+    width: 80px;
+}
+.header-nav-list{
+    height: 100%;
+}
+.header-nav-list > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    list-style: none;
+
+    height: 100%;
+}
+.header-nav-list .header-li{
+    padding: 5px;
+    /* margin: 10px; */
+}
+.header-li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 0 8px 5px 8px;
+    background-color: rgb(79, 158, 228);
+    border-radius: 2px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 2s linear, transform 0.3s ease;
+}
+.header-li a:hover {
+    background-color: rgb(108, 173, 230);
+    opacity: 0.5;
+    transform: scale(.99);
+}
+/*------------------ main content ------------------*/
+main{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 0 .6rem 0 0;
+}
+main > aside{
+    /* posicion y dimenciones del contenedor */
+    position: fixed;
+    left: 0;
+    top: 75px;
+    width: 200px;
+    height: calc(100vh - 75px);
+    /* stilos del contenedor */
+    background-color: rgb(87, 176, 255);
+
+    border-radius:0 15px 15px 0;
+    /* alineacion del contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem;
+}
+aside > p{
+    /* dimenciones del contenedor */
+    width: 100%;
+    /* alineacion del contenido */
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+    /* stilos de texto */
+    text-align: center;
+    font-size: 1.3rem;
+    /* stilo del contenedor */
+    border-bottom: 2px solid black;
+}
+aside > ul{
+    /* dimenciones del contenedor */
+    width: 100%;
+    /* estilos del texto */
+    list-style: none;
+    line-height: 2.3rem;
+    /* alineacion de contenido */
+    padding: 5px;
+}
+aside li{
+    /* alineacion de contenido */
+    padding:0 0 0 1.5rem;
+    margin: 5px;
+    /* estilos del contenedor */
+    border-bottom: 1px solid black;
+}
+aside a{
+    /* dimeniciones del tag a*/
+    display: block;/* obligamos a que el tag ocupe las dimenciones especificadas*/
+    width: 100%;
+    height: 100%;
+    /* alineacion del contenido "texto"*/
+    margin: 0 0 .2rem .3rem;
+    /* stilos de texto */
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: opacity .5s linear, transform 1s ease;
+}
+aside a:hover{
+    background-color: rgb(31, 85, 156);
+    padding: 0 0 0 5px;
+    border-radius: 0 4px 4px 0;
+    opacity: .9;
+    transition: .3s linear;
+}
+main > .content-page{
+    /* posicionameinto del contenido de content-page */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+    padding: .5rem 1rem;
+}
+.content-page > h1{
+    /* dimenciones del contenedor */
+    width: 100%;
+    /* posicionmaiento del contenido */
+    margin: 0 0 .8rem 0;
+    padding: 0 0 0 .5rem;
+    /* estilos de texto */
+    font-family: "Big Shoulders Stencil", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: underline 3px;
+    color: rgb(54, 52, 52);
+}
+.content-page > section{
+    /* dimenciones del contenedor */
+    width: 100%;
+    /* posicionamiento de lconteido */
+    padding: .5rem;
+}
+.content-page > .presentation{
+    /* alineacion de contenido */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    /* setilos de contenedor */
+    background-color: rgba(79, 85, 90, 0.384);
+    border-radius: 25px;
+}
+.presentation > p{
+    /* dimenicones del contenedor */
+    width: 60%;
+    /* alineacion del contenido */
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    /* estilo de texto */
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: justify;
+}
+.presentation > .img-page{
+    /* diemnciones del contenedor */
+    width: 40%;
+    /* alineacion del contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.img-page > img{
+    /* dimencion del contenido */
+    background-color: rgba(0, 0, 0, 0.247);
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+article > .especializacion{
+    /* alineacion del contenido */
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr auto auto 1fr;
+    grid-gap: 1rem;
+    /* estilos del contenedor */
+    background-color: rgba(79, 85, 90, 0.384);
+    border-radius: 25px;
+}
+.especializacion > h3{
+    /* posisionamiento del contenido */
+    grid-row: 1/2;
+    grid-column: 1/5;
+    padding: 1rem;
+    /* estilos de texto */
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+}
+.especializacion > .box{
+    /* dimenciones de los contenedores */
+    height: 18rem;
+    width: 18rem;
+    /* alineacion de contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* estilos de los contenedores */
+    background-color: rgba(0, 0, 0, 0.247);
+    border-radius: 25px;
+
+}
+.especializacion > .espe1{
+    /* posisionamiento del contenido */
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.especializacion > .espe2{
+    /* posisionamiento del contenido */
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+.especializacion > .espe3{
+    /* alineacion del contenido */
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    /* posisionamiento del contenido */
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+.especializacion > .espe4{
+    /* posisionamiento del contenido */
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+/*------------------ footer content ------------------*/
+footer{
+    /* posicionamiento de contenido */
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 200px;
+    padding: 0.2rem 1.6rem 0.2rem 1rem;
+    /* estilo de contenedor */
+    background-color: black;
+}
+footer > p{
+    /* estilos texto */
+    font-weight: 200;
+    font-size: 15px;
+    color: white;
+}
+/* responsividad */
+@media (max-width: 760px){
+    
+}
