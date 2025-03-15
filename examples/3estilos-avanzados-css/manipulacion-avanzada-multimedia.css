@@ -1,0 +1,76 @@
+/* importamos fuente */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* variables */
+:root{
+    /* color de contenedor */
+    --color-primary: #8b848480;
+    --color-secondary: #383636;
+    /* color de texto */
+    --color-text-primary: #ff0000;
+    --color-text-secondary: #f7f7f7;
+    --color-text-tertiary: #0000ff;
+    /* fuente de texto */
+    --font-primary: "Big Shoulders", sans-serif;
+    --font-secondary: "Roboto", sans-serif;
+}
+/* estilos generales */
+body{
+    max-width: 100vw;
+}
+section{
+    /* dimenciones del contenedor */
+    width: 100%;
+    /* alineacion del contenedor */
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    padding: 1% 2%;
+    /* estilos de contenedor */
+    background-color: var(--color-primary);
+}
+section > .box{
+    /* dimenciones del contenedor */
+    width: 40%;
+    /* alineacion del contenedor */
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1% 2%;
+    /* estilos de contenedor */
+    border-radius: 10px;
+    background-color: var(--color-secondary);
+    /* estilos de texto */
+    color: var(--color-text-secondary);
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+}
+/* objetect-fit */
+.box > img, video{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;/*hace que el contenido se dimencione a su contenedor*/
+    /* object-fit: contain|fill|none|scale-down|cover; */
+}
+/* efectos visuales en videos y gif */
+.box > video{
+    /* considera filter: efecto1(valor1) efecto2(valor2) efecto3(valor3) ...; */
+    /* manipulaicon del brillo */
+    filter: brightness(80%);
+    /* ajuste del contraste */
+    filter: contrast(80%);
+    /* convierte a escala de grises */
+    filter: grayscale(50%);
+    /* aplica efectos de desenfoque */
+    filter: blur(.5px);
+    /* aplica efectos de sepia */
+    filter: sepia(50%);
+    /* rota los tonos de la imagen */
+    filter: hue-rotate(30deg);
+    /* ajusta la saturacion */
+    filter: saturate(50%);
+    /* invierte colores de la imagen */
+    filter: invert(60%);
+    /* ajusta la opacidad */
+    filter: opacity(10%);
+}

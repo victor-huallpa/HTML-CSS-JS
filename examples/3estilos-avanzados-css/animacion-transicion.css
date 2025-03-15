@@ -58,7 +58,7 @@ section[class*="transi"] > .transition1, .transition2, .transition3{
     /* animaicon */
     transition-property: background-color, color, padding-bottom ;/* define que propiedades se aplicar al atrancision*/
     transition-duration: .5s;/*define el tiempo de diracion de la trancision*/
-    transition-timing-function: ease-in-out;/*define la curava de velocidad de la transiicon*/
+    transition-timing-function: ease-in-out;/*define la curva de velocidad de la transiicon*/
     transition-delay: .3s;/*define el retraso de la trancision*/
 }
 section[class*="transi"] > .transition1:hover{
