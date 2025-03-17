@@ -116,3 +116,21 @@ do{
     console.log(j);
     j++;
 }while(j < 5);
+//NOTA: dentro de un bucle o ciclo puedes incluir la palabra reservada break para detener el flujo
+
+//manejo de errores
+//sintaxis
+//try{
+//    bloque de codigo que puede generar un error
+//}catch(error){
+//    bloque de codigo que se ejecuta si se produce un error
+//}
+
+//ejemplo
+try{
+    let x = 'hola';
+    let y = 'hola';
+    console.log(x % y);
+}catch(error){
+    console.log('Error: ' + error.message);
+}
