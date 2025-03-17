@@ -131,6 +131,7 @@ try{
     let x = 'hola';
     let y = 'hola';
     console.log(x % y);
+    console.log(variableInexistente);
 }catch(error){
     console.log('Error: ' + error.message);
 }
