@@ -11,26 +11,26 @@
         <a href="#">MY PRIMERA PAGINA</a>
         <nav>
             <ul>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#">acerca de</a></li>
-                <li><a href="#">contactos</a></li>
+                <li><a href="#inicio">inicio</a></li>
+                <li><a href="#imagenes">imagenes</a></li>
+                <li><a href="#videos">videos</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Reto Bloque 3</h1>
+        <h1 id="inicio">Reto Bloque 3</h1>
         <p>
             Este párrafo se redefine mediante CSS avanzado, donde la tipografía personalizada, cargada con `@font-face`, establece un tono único. Sombras y degradados sutiles, aplicados con `text-shadow` y `linear-gradient`, resaltan palabras clave. Animaciones de desvanecimiento y desplazamiento, creadas con `keyframes`, se activan al pasar el cursor, suavizadas por transiciones `transition`. La función `calc()` ajusta el espaciado según el tamaño de la pantalla, mientras que `clip-path` recorta el texto en formas inusuales. Variables CSS mantienen la coherencia, y filtros aplicados mediante transiciones, generan efectos visuales al pasar el cursor.
             </p>
-        <section class="carrusel">
-            <div class="box gatito"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
-            <div class="box gatito"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
-            <div class="box gatito"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
-            <div class="box gatito"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
-            <div class="box gatito"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
+        <section class="carrusel" id="carrusel">
+            <div class="box gatito1"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
+            <div class="box gatito2"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
+            <div class="box gatito3"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
+            <div class="box gatito4"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
+            <div class="box gatito5"><img src="../../resources/gato.webp" alt="gatitto de color negro en posicion de dormido"></div>
             
         </section>
-        <section class="imagenes">
+        <section class="imagenes" id="imagenes">
             <h2>imagenes</h2>
             <div class="box-imagenes">
                 <div class="box-imagen">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </section>
-        <section class="videos">
+        <section class="videos" id="videos">
             <h2>videos</h2>
             <div class="box-videos">
                 <div class="box-video">
@@ -71,7 +71,6 @@
                     </div>
                     <video src="../../resources/gatito.mp4" controls>
                 </div>
-
             </div>
         </section>
     </main>
