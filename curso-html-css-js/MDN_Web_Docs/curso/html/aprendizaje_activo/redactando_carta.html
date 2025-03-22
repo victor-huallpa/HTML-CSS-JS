@@ -1,0 +1,125 @@
+<h3>PROYECTO A DESARROLLAR</h3>
+<p>En este proyecto tu tarea será publicar una carta que debe estar alojada en la intranet de una universidad. La carta es la respuesta de un compañero investigador a un posible estudiante de postgrado en relación a su deseo de trabajar en la universidad.</p>
+<p>Semánticas de bloque/estructurales:</p>
+<ul>
+    <li>Estructura el documento completo incluyendo los elementos (doctype), <code>&lt;html&gt;, &lt;head&gt; y &lt;body&gt;</code>.</li>
+    <li>Incluye los elementos correspondientes de marcado en la carta tales como párrafos y títulos, a excepción de los siguientes. Hay un título principal (la línea que comienza por "Re:") y tres títulos secundarios.</li>
+    <li>Las fechas de comienzo de los semestres, las materias y los bailes exóticos deben ser marcados con los correspondientes tipos de lista.</li>
+    <li>Colocar las dos direcciones dentro de elementos <code>&lt;address&gt;</code> . Cada línea de la dirección debe comenzar en una línea nueva, pero no en un párrafo nuevo.</li>
+</ul>
+<p>
+    Semánticas intralínea:
+</p>
+<ul>
+    <li>Los nombres de remitente y destinatario (también "Tel" e "Email") deben ser marcado con importancia (strong).</li>
+    <li>Deberás usar los elementos apropiados en las cuatro fechas contenidas en el documento para que puedan ser leidas por los motores de lectura automática.</li>
+    <li>La primera dirección y la primera fecha en la carta deben ser asignadas a un atributo de clase llamado "sender-column"; el código CSS lo añadirás posteriormente para que quede bien alineado, como debe ser en un formato de carta clásico.</li>
+    <li>Deberás utilizar el elemento apropiado para los cinco acrónimos/abreviaciones contenidos en el texto principal, proporcionándoles las extensiones correspondientes.</li>
+    <li>Marca apropiadamente los seis sub/superíndices.</li>
+    <li>Los símbolos de los grados, los mayor que y los símbolos de multiplicar deben ser marcados usando las referencias correctas.
+    </li>
+    <li>Marca al menos dos palabras en el texto con fuerte importancia/énfasis.</li>
+    <li>Hay dos lugares donde deberíamos añadir hyperlinks; añádelos con títulos. Como sitio donde apuntan simplemente usa: http://example.com.</li>
+    <li>Marca con el elemento apropiado el lema de la universidad y la cita del autor.</li>
+</ul>
+<p>El encabezamiento del documento:</p>
+<ul>
+    <li>El juego de caracteres del documento deberá ser utf-8 usando una etiqueta meta adecuada.</li>
+    <li>El autor de la carta debe estar especificado con la etiqueta meta correspondiente.</li>
+    <li>El CSS proporcionado deberá estar incluido dentro de la etiqueta adecuada.</li>
+</ul>
+
+<h3>resolucion</h3>
+<address>
+    <p>
+        <b>Dr. Eleanor Gaye</b>
+        <br>
+        Awasome Science Faculty
+        <br>
+        University for Awasome
+        Bobtown. CA 99999
+        <br>
+        usa
+        <br>
+        <b>tel:</b> 123-456-789
+        <br>
+        <b>Email:</b> <div class="email">re@example.com</div> 
+        <br>
+        <time datetime="2016-06-20">20 january 2026</time>
+    </p>
+</address>
+<address>
+    <p>
+        <b>Miss Eileen Dover</b>
+        <br>
+        4321 Clif Top  Edge
+        <br>
+        Dover, CTY XXX
+        <br>
+        UK
+    </p>
+</address>
+<h1>Re: Eileen Dover university application</h1>
+<p>Dear Elain</p>
+<br>
+<p>Thank you for your recent application to join us at the University of Awesome's science faculty to study as part
+    of your PhD next year. I wili answer your questions one by one. in the following section.
+</p>
+
+<h2>Starting Dates</h2>
+<p>We are happy to accommondate you starting your study with us any time. bowover it would suit us better if you
+    could start at the beginning of a semester. the start dates for each one are as follows:
+</p>
+<ul>
+    <li>First semester: <time datetime="2016-09-09">9 september 2016</time></li>
+    <li>Secont semester: <time datetime="2017-06-15">15 january 2017</time></li>
+    <li>Thrid semester: <time datetime="2017-05-02">2 may 2017</time></li>
+</ul>
+<p>Please let me know if this is ok, and if so which start date you would prefer.</p>
+<p>You can find more infomation about <a href="#" title="referencias">Important univercity dates</a> on pur website.</p>
+
+<h2>Subject of study</h2>
+<p>At the Awasome Science Faculty. we have a pretty open_minded reserch facility - as long as the subjects fail 
+    somewhere in the realm of science and tecnology. You seem like an inteligent. dedicated reasarcher, and just <br>
+    the kind of person wed like to have on our team. Saying that, of the ideas you submitted we were most intrigued <br>
+    by are as follows, in order of priority:
+</p>
+<ol>
+    <li><b>Turning H<sub>2</sub>O</b> into wine, and the health benefits of Resvaratrol (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>). </li>
+    <li>Measuring the effect on performance of funk bassplayers at temperatures exceeding 30<sup>o</sup>C(86<sup>o</sup>F) when the <br>
+    audience size exponentially increaces (effect of 3 x 10<sup>4</sup>.)</li>
+    <li><strong><abbr title=" HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr></strong> constructs for representing musical scores.</li>
+</ol>
+<p>
+    So please can you provide more information on each of these subjects, including how long you'd expect the <br>
+    research to take, required stafd and other resources, and anything alse you think we'd need to know? Thanks.
+</p>
+<h2>Exotic dance moves</h2>
+<p>
+    Yes, you are right! As part of my post doctorate work. <strong>I <i>did</i> study exotic tribal dances</strong>To answore your questions , <br>
+    my favourite dance are as follows, with definitions:
+</p>
+ <dl>
+    <dt>Polynesians chickend dance</dt>
+    <dd>
+        A tittle known but <i>very</i> influential dance dating back as far as <b>300BC</b>,a whole village would dance around <br>
+        in a circle like chickens, to encourage their livestock to be <q>fruitful</q>.
+    </dd>
+    <dt>Icelandic brownian shuffe</dt>
+    <dd>
+        Before the Icelanders developed fire as a means of getting warm, they used to practice this dance, whitch <br>
+        involved huddling close together in a circle on the floor, and shuffling their bodies around in imperceptubly <br>
+        tiny, very rapid movements. One of my follow students uesd to say that he thought this dance inspired <br>
+        modern styles such as Twerking.
+    </dd>
+    <dt>Arctic robot dance</dt>
+    <dd>
+        An interesting example of historic misinformation. English explores in the 1960s believed to have <br>
+        discovered a new dance style characterised by <q>robotic</q>, stilied movements, being practiced by inhabitants <br>
+        because they were really cold.
+    </dd>
+ </dl>
+ <p>For more of my resourch, see my <a href="#" title="busqueda">exotic dance resourch page.</a></p>
+ <p>Yours sincerrly</p>
+ <p>Dr Eleanor Gaye</p>
+ <p>University of Awasome motto: <q>Be Awasome to each other.</q> -- <i>The memories of Bill S Presion. Esq</i></p>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="login">
+        <form action="" method="post" autocomplete="off">
+            <h1 class="login_heading">Login</h1>
+            <div class="input_group">
+                <input type="text" name="nombre"  required>
+                <label for="">User Name</label>
+                <span class="icon toggle-password" id="">
+                    <i class="ri-user-3-line login__icon"></i>
+                </span>                
+                <span class="line"></span>
+            </div>
+            <div class="input_group">
+                <input type="password" name="pass" id="pass" required>
+                <label for="">Password</label>
+                <span class="icon toggle-password" id="togglePassword">
+                    <i class="ri-lock-2-line login__icon"></i>
+                </span>                
+                <span class="line"></span>
+            </div>
+            <div class="check">
+                <label for="check">
+                    <input type="checkbox" name="check" id="check" >
+                    Remenber me
+                </label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register">
+                <p>Don´t have an account?   
+                    <a href="#">registers</a>
+                </p>
+            </div>
+        </form>
+        <span class="login_circuit_mask"></span>
+    </div>
+    
+</body>
+</html>

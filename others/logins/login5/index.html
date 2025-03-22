@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:ital,wght@0,300;1,100;1,200&family=Roboto:ital,wght@0,100;1,100;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
+    <title>login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" method="post" autocomplete="off">
+            <h1>login</h1>
+            <div class="input_group">
+                <input type="text" name="nombre"  required>
+                <label for="">User Name</label>
+                <span class="icon toggle-password" id="">
+                    <i id="togglePass" class="fas fa-user"></i>
+                </span>                
+                <span class="line"></span>
+            </div>
+            <div class="input_group">
+                <input type="password" name="pass" id="pass" required>
+                <label for="">Password</label>
+                <span class="icon toggle-password" id="togglePassword">
+                    <i id="togglePass" class="far fa-eye-slash"></i>
+                </span>                
+                <span class="line"></span>
+            </div>
+            <div class="check">
+                <label for="">
+                    <input type="checkbox" name="check" id="check" required>
+                    remenber me
+                </label>
+                <a href="#">Forget Password</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register">
+                <p>Don´t have an account?   
+                    <a href="#">registers</a>
+                </p>
+            </div>
+        </form>
+    </div>
+    <script src="javascript.js"></script>
+    
+</body>
+</html>

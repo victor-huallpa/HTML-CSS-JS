@@ -1,0 +1,165 @@
+<style>
+    html {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200,200,200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(235,235,235);
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250,250,250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(245,245,245);
+}
+
+caption {
+  padding: 10px;
+}
+</style>
+<h2>Aprendizaje activo: jugar con scope y headers</h2>
+  <h3>Items sold summary</h3>
+
+    <table>
+      <caption>Items Sold August 2016</caption>
+      <thead>
+        <tr>
+          <td colspan="2" rowspan="2"></td>
+          <th colspan="3" scope="colgroup">Clothes</th>
+          <th colspan="2" scope="colgroup">Accessories</th>
+        </tr>
+        <tr>
+          <th scope="col">Trousers</th>
+          <th scope="col" >Skirts</th>
+          <th scope="col">Dresses</th>
+          <th scope="col">Bracelets</th>
+          <th scope="col">Rings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="rowgroup" rowspan="3">Belgium</th>
+          <th scope="row">Antwerp</th>
+          <td>56</td>
+          <td>22</td>
+          <td>43</td>
+          <td>72</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <th scope="row">Gent</th>
+          <td>46</td>
+          <td>18</td>
+          <td>50</td>
+          <td>61</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th scope="row">Brussels</th>
+          <td>51</td>
+          <td>27</td>
+          <td>38</td>
+          <td>69</td>
+          <td>28</td>
+        </tr>
+        <tr>
+          <th scope="rowgroup" rowspan="2">The Netherlands</th>
+          <th scope="row">Amsterdam</th>
+          <td>89</td>
+          <td>34</td>
+          <td>69</td>
+          <td>85</td>
+          <td>38</td>
+        </tr>
+        <tr>
+          <th scope="row">Utrecht</th>
+          <td>80</td>
+          <td>12</td>
+          <td>43</td>
+          <td>36</td>
+          <td>19</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Items sold summary</h3>
+
+    <table>
+      <caption>Items Sold August 2016</caption>
+      <thead>
+        <tr>
+          <td colspan="2" rowspan="2"></td>
+          <th colspan="3" id="ropa">Clothes</th>
+          <th colspan="2" id="accesorios">Accessories</th>
+        </tr>
+        <tr>
+          <th id="pantalones" headers="ropa">Trousers</th>
+          <th id="faldas" headers="ropa">Skirts</th>
+          <th id="vestidos" headers="ropa">Dresses</th>
+          <th id="pulseras" headers="accesorios">Bracelets</th>
+          <th id="anillos" headers="accesorios">Rings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="belgica" rowspan="3">Belgium</th>
+          <th id="amberes" headers="belgica">Antwerp</th>
+          <td  headers="belgica amberes pantalones">56</td>
+          <td  headers="belgica amberes faldas" >22</td>
+          <td headers="belgica amberes vestidos">43</td>
+          <td headers="belgica amberes pulseras">72</td>
+          <td headers="belgica amberes anillos">23</td>
+        </tr>
+        <tr>
+          <th id="gante" headers="belgica">Gent</th>
+          <td headers="gante pantalones">46</td>
+          <td headers="gante faldas" >18</td>
+          <td headers="gante vestidos" >50</td>
+          <td headers="gante pulseras">61</td>
+          <td headers="gante anillos">15</td>
+        </tr>
+        <tr>
+          <th id="bruselas" headers="belgica">Brussels</th>
+          <td headers="bruselas pantalones">51</td>
+          <td headers="bruselas faldas">27</td>
+          <td headers="bruselas vestidos">38</td>
+          <td headers="bruselas pulseras">69</td>
+          <td headers="bruselas anillos">28</td>
+        </tr>
+        <tr>
+          <th id="paises-bajos" rowspan="2">The Netherlands</th>
+          <th id="amsterdam" headers="paises-bajos">Amsterdam</th>
+          <td headers="amsterdam pantalones">89</td>
+          <td headers="amsterdam faldas">34</td>
+          <td headers="amsterdam vestidos">69</td>
+          <td headers="amsterdam pulseras">85</td>
+          <td headers="amsterdam anillos">38</td>
+        </tr>
+        <tr>
+          <th id="utrecht" headers="paises-bajos">Utrecht</th>
+          <td headers="utrecht pantalones">80</td>
+          <td headers="utrecht faldas">12</td>
+          <td headers="utrecht vestidos">43</td>
+          <td headers="utrecht pulseras">36</td>
+          <td headers="utrecht anillos">19</td>
+        </tr>
+      </tbody>
+    </table>

@@ -1,0 +1,37 @@
+<h2>Representacion de Codigo Informatico</h2>
+<p>Existe una serie de <b>etiquetas HTML</b> para representar codgio Informatico</p>
+<h3>tiquetas</h3>
+<ul>
+    <li><code>&lt;code&gt;</code> para marcar fragmetos de codigo</li>
+    <li><code>&lt;pre&gt;</code> es para representar espacios en blanco identicos al de tu codigo</li>
+    <li><code>&lt;var&gt;</code> para marcar nombres de variables</li>
+    <li><code>&lt;kbd&gt;</code> para marcar entradas de teclado</li>
+    <li><code>&lt;samp&gt;</code> para marcar lasida de un programa de ordenador</li>
+
+</ul>
+
+<p><b>Ejemplo</b></p>
+<pre><code>var para = document.querySelector('p');
+
+    para.onclick = function() {
+      alert('¡Guau!, ¡deja de apretar!');
+    }</code></pre>
+    
+    <p>
+      No debes utilizar elementos de presentación como <code>&lt;font&gt;</code> y
+      <code>&lt;center&gt;</code>.
+    </p>
+    
+    <p>
+      En el ejemplo de JavaScript anterior, <var>para</var> representa un elemento
+      de párrafo.
+    </p>
+    
+    <p>
+      Selecciona todo el texto con <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.
+    </p>
+    
+    <pre>$ <kbd>ping mozilla.org</kbd>
+    <samp>PING mozilla.org (63.245.215.20): 56 bytes de datos
+    64 bytes de 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms</samp></pre>
+    

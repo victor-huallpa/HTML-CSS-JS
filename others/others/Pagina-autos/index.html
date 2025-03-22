@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ecommerce</title>
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+
+<nav class="navbar">
+	<div class="navbar-logo">Logo</div>
+	<ul class="navbar-links">
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">Productos</a></li>
+		<li><a href="#">Footer</a></li>
+	</ul>	
+	<div class="user-info" id="userInfo">
+		<!--Para mostrar el nombre del usuario -->
+	</div>
+
+	<button class="login-button" id="loginButton">Login</button>
+	<button class="logout-button" id="logoutButton" style="display: none">Logout</button>
+
+
+<a href="micv.pdf" download>
+	<button class="download-pdf">Descargar CV</button>
+</a>
+
+</nav>
+
+<div class="animated-text">
+	<h1>Bienvenidos a este Ecommerce</h1>
+</div>
+
+<div class="carousel-container">
+	<div class="carousel">
+	<img src="auto1.png">
+	<img src="auto2.png">
+	<img src="auto3.png">
+	</div>
+</div>
+
+<h2 class="new-products-title"> Los nuevos productos</h2>
+
+<div class="products-cards-container" id="">
+	<div class="product-card">
+		<img src="toyota/auto1.png" alt="Product 1">
+		<h3>Producto 1</h3>
+		<p data-price="100">Price: $100</p>
+		<button class="add-to-cart-btn" data-product= "Product 1">Add to Cart</button>
+	</div>
+	<!-- -->
+	<div class="product-card">
+		<img src="toyota/auto2.jpg" alt="Product 2">
+		<h3>Producto 1</h3>
+		<p data-price="100">Price: $100</p>
+		<button class="add-to-cart-btn" data-product= "Product 2">Add to Cart</button>
+	</div>
+		<!-- -->
+	<div class="product-card">
+		<img src="toyota/auto3.jpg" alt="Product 3">
+		<h3>Producto 1</h3>
+		<p data-price="100">Price: $100</p>
+		<button class="add-to-cart-btn" data-product= "Product 3">Add to Cart</button>
+	</div>
+		<!-- -->
+	<div class="product-card">
+		<img src="toyota/auto4.jpg" alt="Product 3">
+		<h3>Producto 1</h3>
+		<p data-price="100">Price: $100</p>
+		<button class="add-to-cart-btn" data-product= "Product 3">Add to Cart</button>
+	</div>
+</div>
+
+
+<div class="cart-form-container">
+	<form class="cart-form">
+		<h2>Carrito de compras</h2>
+<ul class="cart-items" id="cartItems">
+	
+
+</ul>
+<div class="cart-total">
+	<label for="total">El precio es:</label>
+	<input type="text" id="total" readonly>
+	
+</div>
+<button type="button" class="buy-button" id="buyButton">
+	Comprar
+</button>
+	</form>
+</div>
+
+<div class="login-popup" id="loginPopup">
+	<div class="login-form">
+		<h2>Login</h2>
+		<input type="text" id="username" placeholder="Username">
+		<input type="password" id="password" placeholder="Password">
+
+		<button id="loginSubmit">Entrar</button>
+
+		<button class="close-button" id="closeButton">Close</button>
+
+	</div>
+</div>
+
+<footer class="footer">
+	<ul class="footer-links">
+		
+<li><a href="#" id="contactoLink">Contacto</a></li>
+<li><a href="#">Servicios</a></li>
+<li><a href="#">Acerca de nosotros</a></li>
+
+	</ul>
+	<p>&copy; 2023 Este Es mi Ecommerce. Es para ustedes ☻</p>
+</footer>
+
+<div class="popup-container" id="contactInfo">
+	<div class="popup-content">
+		<h2>Contacto</h2>
+		<a href="https://www.instagram.com/kenneth28_89/"><p>Instagram: kenneth28_89</p></a>
+		<a href=""><p>Facebook: Licenciado dos ocho</p></a>
+		<a href=""><p>Youtube: Another Programmer</p></a>
+		<button id="closeContactInfo">Cerrar</button>
+	</div>
+
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>

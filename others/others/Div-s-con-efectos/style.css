@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #ff0534;
+    --secundary-color: #05ffd0;
+    --bg-body: #000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-body);
+}
+
+.initio {
+    display: table;
+}
+
+.initio .title{
+    margin: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    /* align-items: center; */
+    color: var(--primary-color);
+
+    font-size: 1.5rem;
+    padding: 20px 50px;
+    margin-top: 2rem;
+    border: 4px solid var(--primary-color);
+    background-color: transparent;
+    border-radius: 9px;
+    box-shadow: 0 0 1em var(--primary-color), inset 0 0 1em var(--primary-color);
+    text-shadow: 0 0 .125em currentColor;
+    position: relative;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 300ms ease-in-out;
+}
+.initio .title:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 3em var(--primary-color), inset 0 0 1em var(--primary-color);
+    color: var(--bg-color);
+    text-shadow: none;
+ }
+
+.general {
+    margin:50px ;
+    display: flex;
+    justify-content: center;
+    border-radius: 15rem;
+    align-items: center;
+} 
+
+.general .box{
+    transform: transition transform 2s ease-in-out,transform 2s ease-in-out;
+    transition: 300ms ease-in-out;
+}
+.general .box1 {
+    margin: 5vh;
+    height: 10em;
+    width: 10em;
+    border-radius: 10% 50%;
+    background-color: transparent;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 1em var(--primary-color), inset 0 0 1em var(--primary-color);
+}
+
+.general .box2 {
+    margin: 5vh;
+    height: 10em;
+    width: 10em;
+    border: 4px solid var(--primary-color);
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 0 1em var(--primary-color), inset 0 0 1em var(--primary-color);
+}
+
+.general .box3 {
+    margin: 5vh;
+    height: 10em;
+    width: 10em;
+    /* background-color: var(--primary-color); */
+    border: 4px solid var(--primary-color);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: 0 0 1em var(--primary-color), inset 0 0 1em var(--primary-color);
+}
+
+.general .box1:hover, .box2:hover, .box3:hover {
+
+    transform: translateY(-10px);
+    transition: .5s;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 2em var(--primary-color), inset 0 0 1em var(--primary-color);
+    
+    cursor: pointer;
+}
+

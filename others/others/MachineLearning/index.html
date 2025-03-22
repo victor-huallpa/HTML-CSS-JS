@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor de Precios de Vehículos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        input {
+            padding: 5px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predictor de Precios de Vehículos</h1>
+    <label for="tipoAuto">Tipo de Auto:</label>
+    <input type="text" id="tipoAuto" placeholder="sedan/SUV/pickup/hatchback/coupé">
+    <br>
+    <label for="numPasajeros">Número de Pasajeros:</label>
+    <input type="number" id="numPasajeros">
+    <br>
+    <label for="tipoCombustible">Tipo de Combustible:</label>
+    <input type="text" id="tipoCombustible" placeholder="gasolina/diesel/híbrido/eléctrico">
+    <br>
+    <label for="anioFabricacion">Año de Fabricación:</label>
+    <input type="number" id="anioFabricacion">
+    <br>
+    <label for="marca">Marca:</label>
+    <input type="text" id="marca">
+    <br>
+    <label for="modelo">Modelo:</label>
+    <input type="text" id="modelo">
+    <br>
+    <label for="kilometraje">Kilometraje:</label>
+    <input type="number" id="kilometraje">
+    <br>
+    <button onclick="predecirPrecio()">Predecir Precio</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Datos de ejemplo
+        const datos = [
+            ['sedan', 5, 'gasolina', 2018, 'Toyota', 'Corolla', 40000, 50000],
+            ['SUV', 7, 'diesel', 2019, 'Honda', 'CR-V', 30000, 60000],
+            ['pickup', 4, 'híbrido', 2017, 'Ford', 'F-150', 60000, 55000],
+            ['hatchback', 5, 'gasolina', 2020, 'Volkswagen', 'Golf', 20000, 45000],
+            ['coupe', 2, 'gasolina', 2016, 'BMW', 'M4', 25000, 70000]
+        ];
+
+        function codificarDatos(datos) {
+            const tiposAuto = new Set(datos.map(fila => fila[0]));
+            const tiposCombustible = new Set(datos.map(fila => fila[2]));
+            const marcas = new Set(datos.map(fila => fila[4]));
+            const modelos = new Set(datos.map(fila => fila[5]));
+
+            const codificadores = {
+                'tipoAuto': Array.from(tiposAuto).reduce((obj, tipo, i) => ({ ...obj, [tipo]: i }), {}),
+                'tipoCombustible': Array.from(tiposCombustible).reduce((obj, tipo, i) => ({ ...obj, [tipo]: i }), {}),
+                'marca': Array.from(marcas).reduce((obj, marca, i) => ({ ...obj, [marca]: i }), {}),
+                'modelo': Array.from(modelos).reduce((obj, modelo, i) => ({ ...obj, [modelo]: i }), {})
+            };
+
+            const X = datos.map(fila => {
+                const [tipoAuto, numPasajeros, tipoCombustible, anioFabricacion, marca, modelo, kilometraje] = fila;
+                return [
+                    codificadores['tipoAuto'][tipoAuto],
+                    numPasajeros,
+                    codificadores['tipoCombustible'][tipoCombustible],
+                    anioFabricacion,
+                    codificadores['marca'][marca],
+                    codificadores['modelo'][modelo],
+                    kilometraje
+                ];
+            });
+
+            const y = datos.map(fila => fila[7]);
+            return { X, y, codificadores };
+        }
+
+        function entrenarModelo(X, y) {
+            const n = X.length;
+            const sumX = X.reduce((sum, fila) => sum.map((val, i) => val + fila[i]), Array(X[0].length).fill(0));
+            const sumY = y.reduce((sum, val) => sum + val, 0);
+            const sumXY = X.map((fila, i) => fila.map((val, j) => val * y[i])).reduce((sum, fila) => sum.map((val, i) => val + fila[i]), Array(X[0].length).fill(0));
+            const sumXX = X.map(fila => fila.map(val => val ** 2)).reduce((sum, fila) => sum.map((val, i) => val + fila[i]), Array(X[0].length).fill(0));
+
+            const coeficientes = sumXX.map((sumXX, i) => {
+                const sumX_i = sumX[i];
+                const sumXY_i = sumXY[i];
+                return (n * sumXY_i - sumX_i * sumY) / (n * sumXX - sumX_i ** 2);
+            });
+
+            const intercepto = (sumY - coeficientes.reduce((sum, coef, i) => sum + coef * sumX[i], 0)) / n;
+
+            return { coeficientes, intercepto };
+        }
+
+        function predecirPrecio() {
+            const tipoAuto = document.getElementById('tipoAuto').value.toLowerCase();
+            const numPasajeros = parseInt(document.getElementById('numPasajeros').value);
+            const tipoCombustible = document.getElementById('tipoCombustible').value.toLowerCase();
+            const anioFabricacion = parseInt(document.getElementById('anioFabricacion').value);
+            const marca = document.getElementById('marca').value;
+            const modelo = document.getElementById('modelo').value;
+            const kilometraje = parseInt(document.getElementById('kilometraje').value);
+
+            const { X, y, codificadores } = codificarDatos(datos);
+            const { coeficientes, intercepto } = entrenarModelo(X, y);
+
+            const nuevoAuto = [
+                codificadores['tipoAuto'][tipoAuto] || 0,
+                numPasajeros,
+                codificadores['tipoCombustible'][tipoCombustible] || 0,
+                anioFabricacion,
+                codificadores['marca'][marca] || 0,
+                codificadores['modelo'][modelo] || 0,
+                kilometraje
+            ];
+
+            const precioPredicho = nuevoAuto.reduce((sum, val, i) => sum + val * coeficientes[i], intercepto);
+
+            document.getElementById('resultado').innerHTML = `El precio predicho del vehículo es: $${precioPredicho.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<h2>Atrib   utos avanzados de tablas</h2>
+<p>Estos atributos ayudan con la agrupacion de columnas o filas y dar una mayor precision a los <br>
+    lectores de pantalla y el usuario sepa como van relacionada toda la informacion
+</p>
+<dl>
+    <dt><b>scope</b></dt>
+    <dd>se aniade al elemento <code>&lt;th&gt;</code> para indicar a los lectores de pantalla a quie nva dirigido el encabezado</dd>
+    <dd><b>Ejemplo</b>
+    <br>
+    <table>
+        <thead>
+            <tr>
+              <th scope="col">Compra</th>
+              <th scope="col">Ubicación</th>
+              <th scope="col">Fecha</th>
+              <th scope="col">Revisión</th>
+              <th scope="col">Coste (€)</th>
+            </tr>
+          </thead>
+          <tr>
+            <th scope="row">Corte de pelo</th>
+          
+            <td>Peluquería</td>
+            <td>12/09</td>
+          
+            <td>Gran idea</td>
+            <td>30</td>
+          </tr>
+          
+    </table>
+    </dd>
+    <dd>este atributo tiene valores, <i>col, row, colgroup y rowgroup</i>, estos dos ultimos agrupan encabezados y subencabezados </dd>
+    <dt>id y headers</dt>
+    <dd>con <i>id</i> se aniade ides unicos para cada <code>&lt;th&gt;</code> y posteriormente vincular a los atributos <i>headers</i> que van dentro de los elementos <code>&lt;dt&gt;</code></dd>
+    <dd>Esto ayuda de manera mas eficiente que scope al agrupar filas o columnas de una tabla</dd>
+    <dd><b>Ejemplo</b>
+    
+        <br>
+        <table>
+            <thead>
+                <tr>
+                  <th id="purchase">Compra</th>
+                  <th id="location">Ubicación</th>
+                  <th id="date">Fecha</th>
+                  <th id="evaluation">Revisión</th>
+                  <th id="cost">Coste (€)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th id="haircut">Corte de pelo</th>
+                  <td headers="location haircut">Peluquería</td>
+                  <td headers="date haircut">12/09</td>
+                  <td headers="evaluation haircut">Gran idea</td>
+                  <td headers="cost haircut">30</td>
+                </tr>
+              
+                
+              </tbody>
+              
+        </table>
+    </dd>
+</dl>

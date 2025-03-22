@@ -1,0 +1,249 @@
+
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:ital,wght@0,200;0,500;1,300 & family= Open+Sans:ital,wght@0,300;0,400;1,300 & family= Poppins:ital,wght@0,300;1,100;1,200 & family= Roboto:ital,wght@0,100;1,100;1,700 & display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: "Poppins";
+}
+ 
+ body {
+	min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background: linear-gradient(0deg, #1b1e26 6%, #303440 95%);
+}
+
+.login {
+    width: 400px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border-radius: 15px;
+	color: #fff;
+}
+.login_heading {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1.6px;
+	padding: 35px 0 0 0;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.input_group{
+    position: relative;
+    width: 320px;
+	padding-top: 10px;
+    margin-top: 30px;
+}
+
+.input_group input{
+    position: relative;
+    width: 100%;
+    padding:20px 10px 10px;
+    color: #e94a44;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;/*esto se agrego*/
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-align: left;
+    z-index: 9;
+}
+
+.input_group label{
+    position: absolute;
+    left: 0;
+    padding: 20px 0 10px 5px;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    text-align: right;/*se agrego esto*/
+    letter-spacing: 0.8px;
+    transition: 0.5s;
+}
+
+.input_group .icon{
+    position: absolute;
+    top: 60px;
+    color: #fff;
+    right: 0;/*se agrego esto*/
+    z-index: 10;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+	transform: translateY(-30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	transition: .5s;
+}
+
+.input_group input:valid~.icon,
+.input_group input:focus~.icon{
+    color: #000000;
+}
+
+.input_group input:valid~label,
+.input_group input:focus~label{
+    color: #b8b8b8;
+    transform: translateX(0) translateY(-35px);
+    font-size: 15px;
+}
+
+.input_group .line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.input_group input:valid~.line,
+.input_group input:focus~.line{
+    height:35px;
+}
+
+.check {
+	padding: 5px 0 5px 0 ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.check label,
+.check a{
+    margin: 20px 0;
+    font-size: 14px;
+    color: #a3a3a3;
+    cursor: pointer;
+}
+
+.check a{
+	text-decoration: none;
+}
+
+.check a:hover{
+	text-decoration: underline;
+	color: #fff;
+}
+.check label{
+    display: flex;
+	justify-content: space-between;
+    color: #e94a44;
+    position: relative;
+	width: 95px;
+}
+.check label input{
+    appearance: none;
+    left: 0;
+}
+
+.check label input::before{
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 2.5px;
+    background:#fff ;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.check label input:checked::before{
+    content: "\2714";
+    background: #e94a44;
+}
+
+form button {
+    width: 100%;
+    height: 44px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #e94a44;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+form:active{
+    opacity: 0.8;
+}
+.register{
+    margin-top: 10px;
+    text-align: center;
+}
+.register p{
+    font-size: 14px;
+    color: #e94a44;
+}
+.register p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.register p a:hover{
+	text-decoration: underline;
+}
+
+.login:before,
+.login_circuit_mask {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 682px;
+	height: 514px;
+}
+
+.login:before {
+	background: url(bg-circuito.svg);
+}
+
+.login_circuit_mask {
+	display: grid;
+	place-items: center;
+	-webkit-mask: url(bg-circuito.svg);
+	mask: url(bg-circuito.svg);
+}
+
+.login_circuit_mask:before {
+	content: '';
+	position: absolute;
+	width: 90px;
+	height: 90px;
+	border-radius: 30%;
+	border: 8px solid #e94a44;
+	animation: onda 3s infinite;
+	animation-delay: 2s;
+}
+
+@keyframes onda {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(5);
+	}
+	100% {
+		transform: scale(8);
+	}
+}

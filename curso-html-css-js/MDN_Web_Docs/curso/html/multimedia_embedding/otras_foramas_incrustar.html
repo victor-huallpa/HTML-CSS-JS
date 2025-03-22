@@ -1,0 +1,56 @@
+<h2>INCRUSTACION MEDIANTE IFRAME, OBJECT Y EMBED</h2>
+<br>
+<p>al principio estas fueron las formas de incrustar contenido a las paginas web pero no fueron las mejores opciones
+    aunque iframe aun se sige usando para incrustra contenido de otros sitios aun que es riesgoso.
+</p>
+<br>
+<ul>
+    <li><code>&lt;iframe&gt;</code></li>
+    <li><code>&lt;object&gt;</code></li>
+    <li><code>&lt;embed&gt;</code></li>
+</ul>
+<p>
+    <b>iframe:</b> esta etqiueta se usa para incrustar contenido de otras paginas ya sean audio visuales o solo visuales <br>
+    con esto puedes incruatr videos, mapas, imagenes, paginas web externas, entre otras.
+    <br>
+    <dl>
+        <dt><b>Strubutos</b></dt>
+        <dd>allowfullscreen: puede colocar el iframe en pantalla completa, pero lo peudes hacer tambein con js o alguna api</dd>
+        <dd>frameborder: este atributo se puede colocar en 1 o 0, ayuda con la colocacion de un borde, segun sea necesario
+            se recomienda ahcerlo con css
+        </dd>
+        <dd>src: aqui es donde se coloca la url de contenido que deseas incrustar.</dd>
+        <dd>wifth y height: esto determina las dimenciones del iframe, tambein se recomienda realizarlo con css</dd>
+        <dd>sandbox: ayuda con la mayor configuracion de seguridad en la incrustacoin de un elemento.</dd>
+    </dl>
+</p>
+<p><b>nota:</b> el uso de iframe solo se recomienda cuando laruta contenga  <STROng>HTTPS</STROng><br>
+    tener cuidado con los derechos de autos
+</p>
+<br>
+<h3>embed</h3>
+<embed
+  src="whoosh.swf"
+  quality="medium"
+  bgcolor="#ffffff"
+  width="550"
+  height="400"
+  name="whoosh"
+  align="middle"
+  allowScriptAccess="sameDomain"
+  allowFullScreen="false"
+  type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer" />
+
+<h3>object</h3>
+<object
+  data="mypdf.pdf"
+  type="application/pdf"
+  width="800"
+  height="1200"
+  typemustmatch>
+  <p>
+    You don't have a PDF plugin, but you can
+    <a href="myfile.pdf">download the PDF file.</a>
+  </p>
+</object>

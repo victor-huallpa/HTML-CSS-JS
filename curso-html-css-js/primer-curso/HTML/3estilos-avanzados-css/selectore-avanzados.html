@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ESTILOS AVANZADOS EN CSS</title>
+    <link rel="stylesheet" href="selectore-avanzados.css">
+</head>
+<body>
+    <h1>SELECTORES AVANZADOS (Atributos, Pseudoclases y Pseudoelementos)</h1>
+    <p>Los selectores avanzados nos permiten aplicar estilos de manera mas precisa y eficiente.</p>
+    <h2>Selectores de Atributos</h2>
+    <p>Los selectores de atributos permiten seleccionar elementos basandose en el valor de sus atributos</p>
+    <p><strong>Ejemplo:</strong></p>
+    <section class="box atributos">
+        <div class="selectores atributo"><p class="texto rojo">Este es un texto rojo p[class^='ro'], selecciona cual tag que tenga la clase que empieza con ro</p></div>
+        <div class="selectores atributo"><p class="texto verde">Este es un texto verde p[class$="rde"], selecciona cual tag que tenga la clase que termina con "rde"</p></div>
+        <div class="selectores atributo"><p class="texto azul">Este es un texto azul</p></div>
+    </section>
+    <h2>Selectores de Pseudoclases</h2>
+    <p>Los PSEUDOCLASES permiten seleccionar elementos en funcion de su estado o posicion en el DOM</p>
+    <p><strong>Ejemplo:</strong></p>
+    <section class="box pseudoclases">
+        <div class="selectores pseudoclase"><p class="texto red">Elemento:hover {color: red;}, al psar el cursor por el texto este se vuelve rojo</p></div>
+        <div class="selectores pseudoclase"><p class="texto green"><em>Elemento elemento:first-child {color: green;},</em> <strong>en color verde al primer hijo del contenedor</strong></p>
+            </div>
+        <div class="selectores pseudoclase"><a href="#" class="texto blue">Elemento:focus {color: blue;}, aplca estilos a los inputs, links o botones que estan enfocados</a></div>
+    </section>
+    <h2>Selectore de Pseudoelementos</h2>
+    <p>Los Pseudoelementos permiten estilar partes especificas de un elemento</p>
+    <p><strong>Ejemplo:</strong></p>
+    <section class="box pseudoelemento">
+        <div class="selectores pseudoelemento">
+            <p class="texto before"><strong>elemento::before {  content: "🔥 "; color: blueviolet;}</strong> agrega contenido antes del parrafo</p>
+        </div>
+        <div class="selectores pseudoelemento">
+            <p class="texto first"><strong>elemento::first-letter {color: red;}</strong> cambia el color de la letra de un parrafo</p>
+        </div>
+    </section>
+
+</body>
+</html>

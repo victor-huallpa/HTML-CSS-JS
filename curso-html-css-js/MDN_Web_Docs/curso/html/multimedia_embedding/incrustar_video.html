@@ -1,0 +1,44 @@
+<h2>Inplementar videos y audio en una pagina web</h2>
+
+<p>Para esto contamos con <b>etiquetas:</b></p>
+<dl>
+    <dt><code>&lt;video&gt;</code></dt>
+    <dd>Este elemento nos permite inscrustar videos </dd>
+    <dd>al igual que la etiqueta <code>&lt;img&gt;</code> este requiere un atributo para asignarle la ruta del video cuenta con la misma dinamica</dd>
+    <dd>Tambien cuenta con el atrubuto <i>controls</i> ayuda a controlar el video yes muy favorable, tambien sepuede hacer con js </dd>
+    <dd><b>Ejemplo:</b><br>
+        <video src="../recursos/rabbit320.mp4" controls>
+            <p>
+                Tu navegador no soporta HTML5. Aqui esta el <a href="../recursos/rabbit320.mp4">enlace del video</a>
+            </p>
+        </video>
+    </dd>
+    <dd>cosnidferando que hay buscadores que no son compatibles con ciertas extenciones de video la opcion recomendable es
+        <br>colocar los link de los videos o rutas dentro de una etiqueta <code>&lt;source&gt;</code>
+        esto hace que en caso un video no sea compatible muestre el que si es compatible.
+    </dd>
+    <dd><b>Ejemplo:</b><br>
+        <video controls>
+            <source src="../recursos/rabbit320.mp4" type="video/mp4"/>
+            <source src="../recursos/rabbit320.webm" type="video/webm" />
+            <p>
+                Tu navegador no soporta HTML5. Aqui esta el <a href="../recursos/rabbit320.mp4">enlace del video</a>
+            </p>
+        </video>
+    </dd>
+    <dd>otros atrubutos que puedes usar <br>
+        width y height: esto ayuda a redimencionar el video, pero esto solo mantiene sus propiedades, cuado lo haces lo hace escalable
+        tambien se puede hacer con css.
+        <br>autoplay: este atributo hace que el video se reprodusca automaticamenete una ves argado el archivo.
+        <br>loop: hace que el video o audo se reprodusca de nuevo cada que finalice
+        <br>muted: hace que los multimedia se reproduscan con el sonido apagado
+        <br>poster: en este atributo puedes incrustar una imagen antes de reproducir un video
+        <br>preload: su utiliza para almacenar en un boffer archivos grandes, contiene valores, none, auto y metadata
+
+    </dd>
+    
+</dl>
+<p><b>Nota:</b> tambien se puede usar el elemento <code>&lt;track&gt;</code><br>
+    esto ayuda a que le des subtitulos a los videos y ayuda tambein con el SEO de la pagina, yaque los buscadores les encata
+    los texto, esto se crea en un archivo con extencio .vtt
+</p>

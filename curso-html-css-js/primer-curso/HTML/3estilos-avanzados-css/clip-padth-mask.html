@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIP PATH Y MASK</title>
+    <link rel="stylesheet" href="clip-padth-mask.css">
+    <svg width="0" height="0">
+        <clipPath id="miClipPath">
+          <path d="M 10 10 L 200 200 L 250 50 Z" />
+        </clipPath>
+    </svg>
+</head>
+<body>
+    <h1>CLIP PATH Y MASK</h1>
+    <p>Estas  propiedades permiten recortar y enmascarar elemtos par acrear efectos unicos</p>
+    <h2>CIP-PATH</h2>
+    <p>te permite definir una región de recorte que determina qué parte de un elemento será visible. Todo lo que esté fuera de la región de recorte se ocultará.</p>
+    <h2>MASK</h2>
+    <p>te permite enmascarar un elemento utilizando una imagen o un gradiente. Las áreas transparentes o semitransparentes de la máscara ocultan el contenido del elemento.</p>
+    <p><strong>Ejemplos:</strong></p>
+    <section>
+        <div class="box path">
+            <h3>imagen de gatito</h3>
+            <img src="../resources/gato.webp" alt="">
+        </div>
+        <div class="box mask">
+            <h3>video de gatito</h3>
+            <video src="../resources/gatito.mp4" controls></video>
+        </div>
+    </section>
+</body>
+</html>
