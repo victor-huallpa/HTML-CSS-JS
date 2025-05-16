@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipulación DOM</title>
+  <style>
+    .resaltado {
+      background-color: yellow;
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="titulo">Título original</h2>
+  <p id="parrafo">Este es un párrafo inicial.</p>
+  <div id="contenedor"></div>
+
+  <button onclick="cambiarTexto()">Cambiar Texto</button>
+  <button onclick="alternarClase()">Alternar Clase</button>
+  <button onclick="crearElemento()">Crear Elemento</button>
+  <button onclick="eliminarPrimer()">Eliminar Primero</button>
+  <button onclick="eliminarUltimo()">Eliminar Último</button>
+
+  <script src="interaccion.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* importamos la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* definimos colores */
+:root{
+    --color-primario: #5409DA;
+    --color-secundario: #4E71FF;
+    --color-terciario: #8DD8FF;
+    --color-cuaternario: #BBFBFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body, html{
+    width: 100vw;
+    height: 100%;
+    background: var(--color-terciario);
+}
+
+header{
+    width: 90%;
+    height: 10%;
+    /* posicionamiento */
+    display: flex;
+    flex-direction: row;
+    padding: .5rem 5%;
+    justify-content: space-around;
+    /* estilos */
+    background: #5409DA;
+    border-radius: 0 0 .8rem .8rem;
+}
+
+header > .nav{
+    width: 37.5%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header > .nav_logo{
+    position: absolute;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_logo{
+    width: 50%;
+    background: var(--color-primario);
+    clip-path: circle(55% at 50%);
+}
+.nav_logo > .img_logo > a{
+    width: 100%;
+    height: 100%;
+}
+.nav_logo > .img_logo > a > img{
+    width: 90%;
+    clip-path: circle(50% at 50%);
+    margin: 10px 0;
+    padding: 0px 5%;
+    transition: transform .5s ease-in-out, clip-path .5s ease-in-out;
+}
+.nav_logo > .img_logo > a > img:hover{
+    transform: scale(1.1);
+    /* clip-path: circle(45% at 50%); */
+}
+
+article > nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+nav > ul > li{
+    /* posision */
+    padding: 2px 1rem;
+    /* estilo */
+    list-style: none;
+}
+ul > li > a {
+    display: inline-block;
+    color: var(--color-cuaternario);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8rem;
+    transition: transform .5s ease-in-out;
+}
+
+ul > li > a:hover {
+    text-decoration: underline;
+    transform: translateY(2px);
+}
+/* article{
+    width: 33.3%;
+} */

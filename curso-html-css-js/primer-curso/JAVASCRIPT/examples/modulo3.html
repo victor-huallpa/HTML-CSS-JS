@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Eventos en Acción</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .error { border: 2px solid red; }
+    .tarea { padding: 5px; cursor: pointer; }
+    .completada { text-decoration: line-through; color: gray; }
+  </style>
+</head>
+<body>
+
+  <h2>Agregar una Tarea</h2>
+
+  <form id="formulario">
+    <input type="text" id="tareaInput" placeholder="Escribe una tarea" />
+    <button type="submit">Agregar</button>
+    <p id="mensaje"></p>
+  </form>
+
+  <h3>Lista de tareas</h3>
+  <ul id="listaTareas"></ul>
+
+  <script src="modulo3.js"></script>
+
+</body>
+</html>

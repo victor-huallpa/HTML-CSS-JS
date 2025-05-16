@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Performance DOM</title>
+  <style>
+    #lista { max-height: 400px; overflow: auto; border: 1px solid #ccc; padding: 10px; }
+    .item { padding: 5px; margin: 2px 0; border-bottom: 1px solid #eee; }
+  </style>
+</head>
+<body>
+
+  <h2>Prueba de rendimiento al insertar elementos</h2>
+
+  <button id="btnNormal">Insertar 1000 elementos (Normal)</button>
+  <button id="btnFragment">Insertar 1000 elementos (DocumentFragment)</button>
+  <button id="btnTemplate">Insertar 1000 elementos (Template)</button>
+
+  <div id="lista"></div>
+
+  <!-- Template -->
+  <template id="itemTemplate">
+    <div class="item">Elemento #</div>
+  </template>
+
+  <script src="modulo4.js"></script>
+
+</body>
+</html>
