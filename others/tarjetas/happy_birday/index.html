@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Tarjeta de Cumpleaños</title>
+
+</head>
+<body>
+
+<!-- Canvas para el confeti -->
+<canvas id="confettiCanvas"></canvas>
+
+<div class="card-container">
+    <div class="page active">
+        <img src="https://picsum.photos/300/200?random=6" alt="Cumpleaños">
+        <h2>¡Feliz Cumpleaños!</h2>
+        <p>Que tu día esté lleno de sonrisas, amor y momentos especiales.</p>
+    </div>
+    <div class="page">
+        <img src="https://picsum.photos/300/200?random=2" alt="Frase motivadora">
+        <h2>Un nuevo año</h2>
+        <p>Recuerda: cada día es una nueva oportunidad para brillar 🌟</p>
+    </div>
+    <div class="page">
+        <img src="https://picsum.photos/300/200?random=3" alt="Amistad">
+        <h2>Momentos Únicos</h2>
+        <p>Atesora cada instante, porque la vida está hecha de momentos hermosos 💖</p>
+    </div>
+    <div class="page">
+        <img src="https://picsum.photos/300/200?random=4" alt="Sueños">
+        <h2>Sigue tus sueños</h2>
+        <p>No dejes que nada apague la luz que brilla dentro de ti ✨</p>
+    </div>
+    <div class="page">
+        <img src="https://picsum.photos/300/200?random=5" alt="Sueños">
+        <h2>Vuela alto</h2>
+        <p>No dejes que nada apague la luz que brilla dentro de ti ✨</p>
+    </div>
+
+    <div class="buttons">
+        <button id="prevBtn">⬅ Atrás</button>
+        <button id="nextBtn">Siguiente ➡</button>
+    </div>
+</div>
+
+<script>
+    /* --- Navegación de páginas --- */
+    const pages = document.querySelectorAll('.page');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentPage = 0;
+
+    function showPage(index) {
+        pages.forEach((page, i) => {
+            page.classList.remove('active');
+        });
+        pages[index].classList.add('active');
+    }
+
+    nextBtn.addEventListener('click', () => {
+        currentPage = (currentPage + 1) % pages.length;
+        showPage(currentPage);
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentPage = (currentPage - 1 + pages.length) % pages.length;
+        showPage(currentPage);
+    });
+
+    /* --- Animación de confeti suave --- */
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    let confetti = [];
+    const colors = ['#FFC0CB', '#FFD700', '#ADD8E6', '#90EE90', '#FFB6C1'];
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function createConfetti() {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const r = Math.random() * 6 + 2;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const speed = Math.random() * 1 + 0.5;
+        confetti.push({ x, y, r, color, speed });
+    }
+
+    function drawConfetti() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        confetti.forEach((c) => {
+            ctx.beginPath();
+            ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+            ctx.fillStyle = c.color;
+            ctx.fill();
+        });
+    }
+
+    function updateConfetti() {
+        confetti.forEach((c) => {
+            c.y += c.speed;
+            if (c.y > canvas.height) {
+                c.y = -5;
+                c.x = Math.random() * canvas.width;
+            }
+        });
+    }
+
+    function loop() {
+        drawConfetti();
+        updateConfetti();
+        requestAnimationFrame(loop);
+    }
+
+    setInterval(createConfetti, 200);
+    loop();
+</script>
+
+</body>
+</html>
