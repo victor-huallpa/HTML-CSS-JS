@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <h2>Calculadora basica</h2>
+        <h3>selecciones operaicon: </h3>
+
+        <select name="operacion" id="" >
+            <!-- <option value="" selected disabled>seleccione</option> -->
+            <option value="suma">suma</option>
+            <option value="resta">resta</option>
+            <option value="multiplicacion">multiplicacion</option>
+            <option value="divicion">divicion</option>
+        </select>
+        <br>
+        <label for="num1">dato 1</label>
+        <input type="text" name="num1" id="num1">
+        <br>
+        <label for="num2">dato 2</label>
+        <input type="text" name="num2" id="num2">
+        <br>
+        <input type="submit" value="calcular" id="calcular" onclick="calcular()">
+        <div id="resultado">
+
+        </div>
+    </main>
+</body>
+<script>
+    function calcular(){
+        let dato1 = document.getElementById('num1').value;
+        let dato2 = document.getElementById('num2').value;
+        let div = document.getElementById("resultado");
+        let nuevo = document.createElement("p");
+        
+        if(isNaN(dato1) ||  isNaN(dato2) || dato1 == '' || dato2 == ""){
+            div.textContent = "";
+            nuevo.textContent = "ingrese datos validos";
+            div.appendChild(nuevo);
+            return ;
+        }
+        div.textContent = "";
+        let suma = Number(dato1) + Number(dato2);
+        nuevo.textContent ="la suma es: " +  suma;
+        div.appendChild(nuevo);
+
+
+    }
+</script>
+</html>
